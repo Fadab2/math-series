@@ -15,8 +15,6 @@ def fibonacci(n):
     else:
         return fibonacci(n-1) + fibonacci(n-2)
     
-print("hello world")
-
 
 def lucas(n):
     """
@@ -52,6 +50,9 @@ def sum_series(num, arg2 = 0, arg3 = 1):
     # [3, 6, 9, 15]
     # (4, 3, 6)
 
+    # empty list to store the series
+    series = []
+
     if arg2 == 0 and arg3 == 1:
         return fibonacci(num)
     else:
@@ -61,9 +62,18 @@ def sum_series(num, arg2 = 0, arg3 = 1):
         return arg2
     if num == 1:
         return arg3
+    
     else:
-        
+        series.append(arg2)
+        series.append(arg3)
+        for number in range(1, num-1):
+            number = arg2 + arg3
+            arg2 = arg3
+            arg3 = number
+            series.append(number)
+        return series
 
+    
 
 
 if __name__ == "__main__":
@@ -74,4 +84,4 @@ if __name__ == "__main__":
     #generate lucas series
     print(f'sum_series with agrs: {sum_series(10, 2, 1)}')
 
-    print(f'sum_series with agrs: {sum_series(10, 4, 3)}')
+    print(f'sum_series with agrs: {sum_series(4, 3, 6)}')

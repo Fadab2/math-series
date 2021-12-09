@@ -75,3 +75,8 @@ def test_sum_series_with_two_and_one():
     actual = sum_series(10, 2, 1)
     expected = 123
     assert actual == expected
+
+def test_sum_series_with_specific_args():
+    actual = sum_series(4, 3, 6)
+    expected = [3, 6, 9, 15]
+    assert actual == expected
