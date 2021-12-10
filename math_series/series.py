@@ -83,5 +83,5 @@ if __name__ == "__main__":
     print(f'sum_series: {sum_series(10)}')
     #generate lucas series
     print(f'sum_series with agrs: {sum_series(10, 2, 1)}')
-
+    # genereate other series starting a 3,6 with total series 4 numbers.
     print(f'sum_series with agrs: {sum_series(4, 3, 6)}')
